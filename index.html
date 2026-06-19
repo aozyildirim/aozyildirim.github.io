@@ -1,21 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Driftlight Games</title>
-  <style>
-    body { font-family: -apple-system, system-ui, sans-serif; background:#1B2A4A;
-           color:#FFE8C9; display:flex; min-height:100vh; margin:0; align-items:center;
-           justify-content:center; text-align:center; }
-    a { color:#2EC4B6; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Driftlight Games</title>
+<style>
+  :root{ --navy:#1B2A4A; --coral:#FF7E5F; --gold:#FFC93C; --turq:#2EC4B6; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,system-ui,"Segoe UI",Roboto,sans-serif;color:#fff;
+       background:linear-gradient(160deg,#3FA8E0 0%,#9B6BD3 32%,#FF8E70 70%,#FFC93C 100%);
+       min-height:100vh;}
+  .wrap{max-width:820px;margin:0 auto;padding:56px 20px 80px}
+  header{text-align:center;margin-bottom:48px}
+  .logo{font-size:13px;letter-spacing:3px;opacity:.9;font-weight:800}
+  h1{font-size:clamp(34px,7vw,56px);margin:6px 0 10px;text-shadow:0 3px 0 rgba(0,0,0,.18)}
+  header p{font-size:17px;opacity:.95}
+  .games{display:flex;flex-direction:column;gap:18px}
+  .card{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.16);
+        backdrop-filter:blur(8px);border:1.5px solid rgba(255,255,255,.35);
+        border-radius:24px;padding:18px 20px;box-shadow:0 10px 30px rgba(27,42,74,.25)}
+  .card img{width:84px;height:84px;border-radius:20px;flex:none;
+            box-shadow:0 6px 16px rgba(0,0,0,.25)}
+  .meta{flex:1;min-width:0}
+  .meta h2{font-size:21px;margin-bottom:3px}
+  .meta p{font-size:14px;opacity:.92;line-height:1.4}
+  .btn{display:inline-block;margin-top:0;padding:11px 20px;border-radius:16px;
+       font-weight:800;font-size:14px;text-decoration:none;white-space:nowrap;flex:none;
+       background:#fff;color:var(--coral);box-shadow:0 5px 0 rgba(0,0,0,.15)}
+  .btn.soon{background:rgba(255,255,255,.25);color:#fff;box-shadow:none;
+            border:1.5px solid rgba(255,255,255,.5)}
+  footer{text-align:center;margin-top:48px;font-size:13px;opacity:.85}
+  footer a{color:#fff}
+  @media(max-width:520px){.card{flex-wrap:wrap}.btn{width:100%;text-align:center;margin-top:6px}}
+</style>
 </head>
 <body>
-  <main>
-    <h1>🌅 Driftlight Games</h1>
-    <p>Makers of <strong>Sandy Cove: Merge Tales</strong>.</p>
-    <p><a href="https://play.google.com/store/apps/details?id=com.driftlight.sandy_merge">Get it on Google Play</a></p>
-  </main>
+<div class="wrap">
+  <header>
+    <div class="logo">🌅 DRIFTLIGHT GAMES</div>
+    <h1>Cozy games, golden sunsets.</h1>
+    <p>Relaxing, beautiful mobile games — easy to start, hard to put down.</p>
+  </header>
+
+  <div class="games">
+    <div class="card">
+      <img src="games/sandysurf.png" alt="Sandy Surf">
+      <div class="meta">
+        <h2>🏄 Sandy Surf</h2>
+        <p>A glossy 3D endless surf-runner. Ride the sunset, dodge buoys, collect coins and unlock dozens of ball skins.</p>
+      </div>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.driftlight.sandy_surf">Google Play</a>
+    </div>
+
+    <div class="card">
+      <img src="games/sandystack.png" alt="Sandy Stack">
+      <div class="meta">
+        <h2>🗼 Sandy Stack</h2>
+        <p>A cozy 3D tower-stacking game. Tap to drop, nail the perfect alignment, build your tower to the sky.</p>
+      </div>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.driftlight.sandy_stack">Google Play</a>
+    </div>
+
+    <div class="card">
+      <img src="games/sandycove.png" alt="Sandy Cove: Merge Tales">
+      <div class="meta">
+        <h2>🌅 Sandy Cove: Merge Tales</h2>
+        <p>A cozy merge-2 game — rebuild a storm-hit seaside town, meet adorable villagers and complete your collection.</p>
+      </div>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.driftlight.sandy_merge">Google Play</a>
+    </div>
+  </div>
+
+  <footer>
+    Made with ☀️ by Driftlight Games · <a href="mailto:ali.ozyildirim@flo.com.tr">Contact</a>
+  </footer>
+</div>
 </body>
 </html>
